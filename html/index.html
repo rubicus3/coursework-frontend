@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Астероиды и Кометы</title>
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="stylesheet" href="loading.css" />
+        <link rel="stylesheet" href="../css/main.css" />
+        <link rel="stylesheet" href="../css/loading.css" />
     </head>
     <body>
         <div class="loading-screen">
@@ -71,14 +71,6 @@
             <p>&copy; 2023 Астероиды и Кометы. Все права защищены.</p>
         </footer>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const loadingScreen = document.querySelector(".loading-screen");
-                setTimeout(() => {
-                    loadingScreen.style.opacity = "0";
-                    setTimeout(() => (loadingScreen.style.display = "none"), 4000);
-                }, 5000);
-            });
-        </script>
+        <script src="../js/main.js"></script>
     </body>
 </html>
