@@ -6,6 +6,9 @@
         <title>Астероиды и Кометы</title>
         <link rel="stylesheet" href="../css/main.css" />
         <link rel="stylesheet" href="../css/loading.css" />
+        <link rel="stylesheet" href="../css/header.css" />
+
+        <link rel="icon" href="../assets/logo.png" sizes="any" />
     </head>
     <body>
         <div class="loading-screen">
@@ -28,30 +31,48 @@
             <div class="meteor-15"></div>
         </div>
 
-        <header>
-            <img src="../assets/logo.png" />
-            <nav>
-                <ul>
-                    <li><a href="#home">Главная</a></li>
-                    <li><a href="#asteroids">Об астероидах</a></li>
-                    <li><a href="#comets">О кометах</a></li>
-                    <li><a href="#news">Галерея</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div id="header-container">
+            <header id="landscape-header">
+                <img src="../assets/logo.png" />
+                <nav>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#asteroids">Об астероидах</a></li>
+                        <li><a href="#comets">О кометах</a></li>
+                        <li><a href="#news">Галерея</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+            </header>
 
+            <header id="mobile-header">
+                <img src="../assets/logo.png" />
+                <img src="../assets/menu.svg" id="menu-btn" onclick="onMenuClick()" />
+            </header>
+
+            <div id="mobile-header-overlay">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#asteroids">Об астероидах</a></li>
+                        <li><a href="#comets">О кометах</a></li>
+                        <li><a href="#news">Галерея</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <main>
             <div class="overflow-container">
                 <img class="image-in-overflow" src="../assets/Comet.jpg" />
                 <div id="text1">
-                    <h1>Астероиды</h1>
+                    <h1>Кометы</h1>
                 </div>
             </div>
             <div class="overflow-container">
                 <img class="image-in-overflow" src="../assets/Asteroid.jpeg" />
                 <div id="text2">
-                    <h1>Кометы</h1>
+                    <h1>Астероиды</h1>
                 </div>
             </div>
         </main>

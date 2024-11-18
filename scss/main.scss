@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
 
 html {
-    overflow: visible;
+    overflow: hidden;
 }
 
 body,
@@ -25,34 +25,6 @@ h4,
 h5 {
     font-family: "Ubuntu Condensed", sans-serif;
     font-style: normal;
-}
-
-header {
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    nav ul {
-        list-style: none;
-        margin: 0;
-
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 20px;
-        }
-    }
-
-    img {
-        width: 35px;
-    }
 }
 
 footer {
