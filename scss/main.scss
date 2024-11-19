@@ -1,7 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
 
+$base-overflow-vh: 70vh;
+
 html {
     overflow: hidden;
+}
+
+* {
+    font-family: "Ubuntu Condensed", sans-serif;
+    font-style: normal;
 }
 
 body,
@@ -10,21 +17,6 @@ main {
     padding: 0;
     margin: 0;
     background-image: radial-gradient(ellipse at top, #080e21 0%, #1b2735 95%);
-}
-
-.ubuntu-condensed-regular {
-    font-family: "Ubuntu Condensed", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-span,
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: "Ubuntu Condensed", sans-serif;
-    font-style: normal;
 }
 
 footer {
@@ -38,12 +30,26 @@ footer {
     background-size: cover;
     object-fit: cover;
     width: 100%;
-    height: 60vh;
+    height: $base-overflow-vh;
 }
 
 .overflow-container {
     width: 100%;
     position: relative;
+
+    div {
+        color: #fff;
+        position: absolute;
+        flex-direction: column;
+        width: 40%;
+        height: 20vh;
+
+        font-size: 24px;
+
+        h1 {
+            font-weight: 500;
+        }
+    }
 
     div button {
         background: none;
@@ -62,34 +68,26 @@ footer {
 }
 
 #text1 {
-    color: #fff;
-    position: absolute;
-    flex-direction: column;
-    top: 25%;
-    right: 20%;
-    width: 30vw;
-    height: 20vh;
-
-    font-size: 24px;
-
-    h1 {
-        font-weight: 500;
-    }
+    top: 15%;
+    right: 5%;
 }
 
 #text2 {
-    color: #fff;
-    position: absolute;
-    flex-direction: column;
-    top: 25%;
-    left: 20%;
+    top: 15%;
+    left: 10%;
+}
 
-    width: 30vw;
-    height: 20vh;
+#gallery-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    font-size: 24px;
+    position: relative;
+    z-index: 2;
 
-    h1 {
-        font-weight: 500;
-    }
+    background-color: #1b2735;
+    width: 100%;
+    height: $base-overflow-vh;
+
+    box-shadow: 0px 0px 5px 5px rgb(40, 40, 40);
 }
