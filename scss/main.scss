@@ -20,7 +20,7 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background-color: rgb(12, 4, 33);
     color: #fff;
     text-align: center;
     padding: 15px;
@@ -36,6 +36,7 @@ footer {
 .overflow-container {
     width: 100%;
     position: relative;
+    overflow: hidden;
 
     div {
         color: #fff;
@@ -45,6 +46,9 @@ footer {
         height: 20vh;
 
         font-size: 24px;
+
+        transform: translateY(0);
+        transition: transform 0.1s linear;
 
         h1 {
             font-weight: 500;

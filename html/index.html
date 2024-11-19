@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../css/main.css" />
         <link rel="stylesheet" href="../css/loading-screen.css" />
         <link rel="stylesheet" href="../css/header.css" />
+        <link rel="stylesheet" href="../css/overlay.css" />
 
         <link rel="icon" href="../assets/logo.png" sizes="any" />
     </head>
@@ -74,7 +75,43 @@
                     <button href="comets.html" onclick="location.href='comets.html';">Explore</button>
                 </div>
             </div>
-            <div id="gallery-div"></div>
+
+            <div id="gallery-div">
+                <div class="overlay-container">
+                    <img src="../assets/Piazzi_Cerere.jpg" />
+                    <div class="overlay">
+                        <span>
+                            Книга Пьяцци «Della scoperta del nuovo pianeta Cerere Ferdinandea», в которой изложено
+                            открытие Цереры.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="overlay-container">
+                    <img
+                        style="
+                            width: 250px;
+                            border-radius: 8px;
+                            border-width: 5px;
+                            border-color: black;
+                            border-style: solid;
+                        "
+                        src="../assets/Ceresintruecolor.png"
+                    />
+                    <div class="overlay">
+                        <span> Снимок Цереры в натуральном цвете, сделанный АМС Dawn 4 мая 2015 года </span>
+                    </div>
+                </div>
+
+                <div>
+                    <h1>Галерея</h1>
+                    <span
+                        >Просмотрите галерею красивых снимков космических объектов прямиком из объектива
+                        телескопа!</span
+                    >
+                </div>
+            </div>
+
             <div class="overflow-container">
                 <img class="image-in-overflow" src="../assets/Asteroid.jpg" />
                 <div id="text2">
