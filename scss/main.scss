@@ -83,8 +83,13 @@ footer {
 
 #gallery-div {
     display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 
     position: relative;
     z-index: 2;
@@ -94,4 +99,21 @@ footer {
     height: $base-overflow-vh;
 
     box-shadow: 0px 0px 5px 5px rgb(40, 40, 40);
+
+    div {
+        font-size: 24px;
+
+        color: #fff;
+    }
+
+    div#gallery-images {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        align-items: center;
+        justify-content: space-around;
+
+        gap: 20vw;
+    }
 }
