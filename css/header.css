@@ -25,6 +25,13 @@
   text-decoration: none;
   font-size: 20px;
 }
+#header-container ul li {
+  transition: 0.15s;
+}
+#header-container ul li:hover {
+  transition: 0.3s;
+  transform: scale(1.15);
+}
 #header-container #landscape-header {
   display: flex;
   justify-content: center;

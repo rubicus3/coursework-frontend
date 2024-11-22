@@ -26,6 +26,13 @@
             text-decoration: none;
             font-size: 20px;
         }
+        li {
+            transition: 0.15s;
+        }
+        li:hover {
+            transition: 0.3s;
+            transform: scale(1.15);
+        }
     }
 
     #landscape-header {
