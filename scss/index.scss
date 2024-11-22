@@ -1,0 +1,93 @@
+$base-overflow-vh: 70vh;
+
+.image-in-overflow {
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: $base-overflow-vh;
+}
+
+.overflow-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    div {
+        color: #fff;
+        position: absolute;
+        flex-direction: column;
+        width: 40%;
+        height: 20vh;
+
+        font-size: 24px;
+
+        transform: translateY(0);
+        transition: transform 0.1s linear;
+
+        h1 {
+            font-weight: 500;
+        }
+    }
+
+    div button {
+        background: none;
+        border: 1px solid #fff;
+        border-radius: 2px;
+        color: #fff;
+        width: 90px;
+        height: 36px;
+        cursor: pointer;
+
+        :hover {
+            background-color: #080e21;
+            transform: scale(1.2);
+        }
+    }
+}
+
+#text1 {
+    top: 15%;
+    right: 5%;
+}
+
+#text2 {
+    top: 15%;
+    left: 10%;
+}
+
+#gallery-div {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+    position: relative;
+    z-index: 2;
+
+    background-color: #1b2735;
+    width: 100%;
+    height: $base-overflow-vh;
+
+    box-shadow: 0px 0px 5px 5px rgb(40, 40, 40);
+
+    div {
+        font-size: 24px;
+
+        color: #fff;
+    }
+
+    div#gallery-images {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        align-items: center;
+        justify-content: space-around;
+
+        gap: 20vw;
+    }
+}
