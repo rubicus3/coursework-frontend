@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
         loadingScreen.style.display = "none";
         loadingScreen.style.opacity = "0";
         document.getElementsByTagName("html")[0].style.overflow = "visible";
+    } else {
+        loadingScreen.style.display = "block";
+        loadingScreen.style.opacity = "1";
+        document.getElementsByTagName("html")[0].style.overflow = "hidden";
     }
 
     setTimeout(() => {
