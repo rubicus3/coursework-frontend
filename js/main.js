@@ -1,7 +1,13 @@
+var enableLoadingOverlay = false;
+
 document.addEventListener("DOMContentLoaded", function () {
     const loadingScreen = document.querySelector(".loading-screen");
 
-    // loadingScreen.style.opacity = "0";
+    if (!enableLoadingOverlay) {
+        loadingScreen.style.display = "none";
+        loadingScreen.style.opacity = "0";
+        document.getElementsByTagName("html")[0].style.overflow = "visible";
+    }
 
     setTimeout(() => {
         loadingScreen.style.opacity = "0";
