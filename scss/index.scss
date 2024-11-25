@@ -18,6 +18,9 @@ $base-overflow-vh: 70vh;
         flex-direction: column;
         width: 40%;
         height: 20vh;
+        @media screen and (max-width: 712px) {
+            width: 90%;
+        }
 
         font-size: 24px;
 
@@ -89,5 +92,26 @@ $base-overflow-vh: 70vh;
         justify-content: space-around;
 
         gap: 20vw;
+    }
+}
+
+#section-comets div,
+#section-asteroids div {
+    opacity: 0;
+
+    animation-name: appear;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-250px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
