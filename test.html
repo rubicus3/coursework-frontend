@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Карусель</title>
+    </head>
+    <body>
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-item">Элемент 1</div>
+                <div class="carousel-item">Элемент 2</div>
+                <div class="carousel-item">Элемент 3</div>
+            </div>
+            <button class="prev" onclick="prevSlide()">❮</button>
+            <button class="next" onclick="nextSlide()">❯</button>
+        </div>
+        <style>
+            .carousel {
+                position: relative;
+                width: 300px;
+                overflow: hidden;
+                margin: auto;
+            }
+
+            .carousel-container {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .carousel-item {
+                min-width: 300px;
+                box-sizing: border-box;
+                text-align: center;
+                background-color: #f2f2f2;
+                padding: 40px 0;
+                border: 1px solid #ddd;
+            }
+
+            button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                z-index: 1;
+            }
+
+            .prev {
+                left: 0;
+            }
+
+            .next {
+                right: 0;
+            }
+        </style>
+        <script src="script.js">
+
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                const slides = document.querySelectorAll('.carousel-item');
+                const totalSlides = slides.length;
+
+                if (index >= totalSlides) {
+                    currentIndex = 0;
+                } else if (index < 0) {
+                    currentIndex = totalSlides - 1;
+                } else {
+                    currentIndex = index;
+                }
+
+                const offset = -currentIndex * 300;
+                document.querySelector('.carousel-container').style.transform = translateX(${offset}px);
+            }
+
+            function nextSlide() {
+                showSlide(currentIndex + 1);
+            }
+
+            function prevSlide() {
+                showSlide(currentIndex - 1);
+            }
+
+            // Initialize the first slide
+            showSlide(currentIndex);
+        </script>
+    </body>
+</html>
