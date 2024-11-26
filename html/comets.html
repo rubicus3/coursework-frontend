@@ -69,11 +69,48 @@
                     <div class="slider-container">
                         <div class="slider-content">
                             <div class="slider-single">
-                                <img class="slider-single-image" src="../assets/Asteroid.jpeg" alt="6" />
-                                <h1 class="slider-single-title">Through the Mountains</h1>
+                                <div class="slider-single-image">
+                                    <div class="overlay-container">
+                                        <img src="../assets/Aristotle.jpg" />
+                                        <div class="overlay">
+                                            <span>
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos
+                                                itaque veniam cum impedit et sit rerum. Velit harum delectus veniam
+                                                iusto corrupti enim rem impedit.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h1 class="slider-single-title">Вчера в истоирии</h1>
                             </div>
                             <div class="slider-single">
-                                <img class="slider-single-image" src="../assets/Asteroid.jpg" alt="6" />
+                                <div class="slider-single-image">
+                                    <div class="overlay-container">
+                                        <img src="../assets/353px-Bayeux_Tapestry_scene32_Halley_comet.jpg" />
+                                        <div class="overlay">
+                                            <span>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                                                voluptatibus in eveniet qui dignissimos provident nulla optio blanditiis
+                                                soluta, facilis reiciendis dolores, iure cum veritatis?
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h1 class="slider-single-title">Вчера в истоирии</h1>
+                            </div>
+                            <div class="slider-single">
+                                <div class="slider-single-image">
+                                    <div class="overlay-container">
+                                        <img src="../assets/Asteroid.jpeg" />
+                                        <div class="overlay">
+                                            <span>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eligendi
+                                                neque eos facilis, voluptas nulla odit deleniti non laborum pariatur
+                                                ullam aut est enim assumenda.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
                                 <h1 class="slider-single-title">Вчера в истоирии</h1>
                             </div>
                         </div>
@@ -95,6 +132,57 @@
             <p>&copy; 2023 Астероиды и Кометы. Все права защищены.</p>
         </footer>
 
+        <style>
+            .overlay-container {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .overlay-container img {
+                height: 100%;
+                max-width: 100%;
+
+                object-fit: cover;
+
+                border-radius: 1rem;
+            }
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+
+                width: 100%;
+                height: 0%;
+
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: end;
+
+                background-image: linear-gradient(to top, #000000 0%, #00000007 100%);
+                opacity: 0;
+                background-color: color;
+
+                transition: all 0.3s ease;
+            }
+
+            .overlay-container:hover .overlay {
+                opacity: 1;
+                height: 50%;
+            }
+
+            .overlay span {
+                font-family: "Cormorant", serif;
+                font-optical-sizing: auto;
+                font-weight: 600;
+                font-style: normal;
+                font-size: 19px;
+
+                margin: 7px;
+
+                text-align: justify;
+            }
+        </style>
         <script src="../js/header.js"></script>
         <script src="../node_modules/@glidejs/glide/dist/glide.min.js"></script>
         <script src="../js/carousel.js"></script>
