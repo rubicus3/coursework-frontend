@@ -88,8 +88,10 @@
     #scrollable-list {
         position: inherit;
         background-color: rgba(110, 99, 99, 0.5);
-        width: 60vw;
-        height: 50vw;
+        border-radius: 15px;
+
+        width: fit-content;
+        height: fit-content;
     }
 
     #info-list {

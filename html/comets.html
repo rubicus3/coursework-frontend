@@ -8,6 +8,13 @@
         <link rel="stylesheet" href="../css/comets.css" />
         <link rel="stylesheet" href="../css/header.css" />
         <link rel="stylesheet" href="../css/overlay.css" />
+        <link rel="stylesheet" href="../css/carousel.css" />
+
+        <!-- Required Core Stylesheet -->
+        <link rel="stylesheet" href="../node_modules/@glidejs/glide/dist/css/glide.core.min.css" />
+
+        <!-- Optional Theme Stylesheet -->
+        <link rel="stylesheet" href="../node_modules/@glidejs/glide/dist/css/glide.theme.min.css" />
 
         <link rel="icon" href="../assets/logo.png" sizes="any" />
     </head>
@@ -58,7 +65,20 @@
                 <img src="../assets/comet-multi.png" />
             </section>
             <section class="overflow-container" id="section-history">
-                <div id="scrollable-list"></div>
+                <div id="scrollable-list">
+                    <div class="slider-container">
+                        <div class="slider-content">
+                            <div class="slider-single">
+                                <img class="slider-single-image" src="../assets/Asteroid.jpeg" alt="6" />
+                                <h1 class="slider-single-title">Through the Mountains</h1>
+                            </div>
+                            <div class="slider-single">
+                                <img class="slider-single-image" src="../assets/Asteroid.jpg" alt="6" />
+                                <h1 class="slider-single-title">Вчера в истоирии</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div id="info-list">
                     <h1>ИНФА</h1>
                     <p>
@@ -76,5 +96,7 @@
         </footer>
 
         <script src="../js/header.js"></script>
+        <script src="../node_modules/@glidejs/glide/dist/glide.min.js"></script>
+        <script src="../js/carousel.js"></script>
     </body>
 </html>
