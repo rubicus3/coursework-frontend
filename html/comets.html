@@ -19,37 +19,17 @@
         <link rel="icon" href="../assets/logo.png" sizes="any" />
     </head>
     <body>
-        <div id="header-container">
-            <header id="landscape-header">
-                <img src="../assets/logo.png" />
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="comets.html">О кометах</a></li>
-                        <li><a href="asteroids.html">Об астероидах</a></li>
-                        <li><a href="gallery.html">Галерея</a></li>
-                        <li><a href="#footer">Контакты</a></li>
-                    </ul>
-                </nav>
-            </header>
-
-            <header id="mobile-header">
-                <img src="../assets/logo.png" />
-                <img src="../assets/menu.svg" id="menu-btn" onclick="onMenuClick()" />
-            </header>
-
-            <div id="mobile-header-overlay">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="comets.html">О кометах</a></li>
-                        <li><a href="asteroids.html">Об астероидах</a></li>
-                        <li><a href="gallery.html">Галерея</a></li>
-                        <li><a href="#footer">Контакты</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        <header id="header">
+            <img id="img-logo" src="../assets/logo.png" />
+            <nav id="nav">
+                <a href="index.html">Главная</a>
+                <a href="comets.html">О кометах</a>
+                <a href="asteroids.html">Об астероидах</a>
+                <a href="gallery.html">Галерея</a>
+                <a href="#footer">Контакты</a>
+            </nav>
+            <img id="menu-btn" src="../assets/menu.svg" onclick="onMenuClick()" />
+        </header>
 
         <main>
             <section class="overflow-container" id="section-general">
