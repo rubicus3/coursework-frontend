@@ -1,4 +1,4 @@
-$base-overflow-vh: 75vh;
+$base-overflow-vh: 85vh;
 $drop-shadow: drop-shadow(0 0 0.75rem gray);
 
 .overflow-container {
@@ -18,6 +18,10 @@ $drop-shadow: drop-shadow(0 0 0.75rem gray);
         object-fit: cover;
         width: 100%;
         height: $base-overflow-vh;
+
+        @media screen and (max-width: 712px) {
+            height: calc($base-overflow-vh * 1.5);
+        }
     }
 }
 
@@ -30,7 +34,11 @@ $drop-shadow: drop-shadow(0 0 0.75rem gray);
     height: $base-overflow-vh;
 
     @media screen and (max-width: 712px) {
-        flex-wrap: wrap;
+        height: calc($base-overflow-vh * 1.5);
+    }
+
+    @media screen and (max-width: 712px) {
+        flex-wrap: wrap-reverse;
     }
 
     div {
@@ -42,15 +50,21 @@ $drop-shadow: drop-shadow(0 0 0.75rem gray);
         animation-fill-mode: forwards;
 
         @media screen and (max-width: 712px) {
-            width: 85vw;
+            width: 95vw;
             height: fit-content;
         }
         h1 {
             font-size: 3rem;
+            @media screen and (max-width: 712px) {
+                font-size: 2.5rem;
+            }
             filter: $drop-shadow;
         }
         p {
             font-size: 1.5rem;
+            @media screen and (max-width: 712px) {
+                font-size: 1.2rem;
+            }
             filter: $drop-shadow;
         }
         button {

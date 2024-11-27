@@ -12,7 +12,12 @@
   background-size: cover;
   object-fit: cover;
   width: 100%;
-  height: 75vh;
+  height: 85vh;
+}
+@media screen and (max-width: 712px) {
+  .overflow-container::before {
+    height: 127.5vh;
+  }
 }
 
 #section-general {
@@ -20,11 +25,16 @@
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: 75vh;
+  height: 85vh;
 }
 @media screen and (max-width: 712px) {
   #section-general {
-    flex-wrap: wrap;
+    height: 127.5vh;
+  }
+}
+@media screen and (max-width: 712px) {
+  #section-general {
+    flex-wrap: wrap-reverse;
   }
 }
 #section-general div {
@@ -36,7 +46,7 @@
 }
 @media screen and (max-width: 712px) {
   #section-general div {
-    width: 85vw;
+    width: 95vw;
     height: fit-content;
   }
 }
@@ -44,9 +54,19 @@
   font-size: 3rem;
   filter: drop-shadow(0 0 0.75rem gray);
 }
+@media screen and (max-width: 712px) {
+  #section-general div h1 {
+    font-size: 2.5rem;
+  }
+}
 #section-general div p {
   font-size: 1.5rem;
   filter: drop-shadow(0 0 0.75rem gray);
+}
+@media screen and (max-width: 712px) {
+  #section-general div p {
+    font-size: 1.2rem;
+  }
 }
 #section-general div button {
   background: none;
