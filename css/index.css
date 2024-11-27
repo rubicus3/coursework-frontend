@@ -1,34 +1,55 @@
-.image-in-overflow {
-  background-size: cover;
-  object-fit: cover;
-  width: 100%;
-  height: 70vh;
-}
-
 .overflow-container {
-  width: 100%;
   position: relative;
   overflow: hidden;
 }
-.overflow-container div {
-  color: #fff;
+.overflow-container::before {
   position: absolute;
+  top: 30vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  object-fit: cover;
+  object-position: top;
+  width: 100vw;
+  height: 100vh;
+}
+
+#section-comets {
+  width: 100%;
+  height: 100vh;
+  height: 100vh;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
+@media screen and (max-width: 712px) {
+  #section-comets {
+    width: 90%;
+    flex-direction: column;
+  }
+}
+#section-comets div {
+  color: #fff;
   flex-direction: column;
   width: 40%;
   height: 20vh;
   font-size: 24px;
   transform: translateY(0);
   transition: transform 0.1s linear;
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
 }
 @media screen and (max-width: 712px) {
-  .overflow-container div {
+  #section-comets div {
     width: 90%;
   }
 }
-.overflow-container div h1 {
+#section-comets div h1 {
   font-weight: 500;
 }
-.overflow-container div button {
+#section-comets div button {
   background: none;
   border: 1px solid #fff;
   border-radius: 2px;
@@ -37,19 +58,58 @@
   height: 36px;
   cursor: pointer;
 }
-.overflow-container div button :hover {
+#section-comets div button :hover {
   background-color: #080e21;
   transform: scale(1.2);
 }
-
-#text1 {
-  top: 15%;
-  right: 5%;
+#section-comets::before {
+  content: url("../assets/Comet.jpg");
 }
 
-#text2 {
-  top: 15%;
-  left: 10%;
+#section-asteroids {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  position: relative;
+}
+#section-asteroids:last-child {
+  color: #fff;
+  flex-direction: column;
+  width: 40%;
+  height: 20vh;
+  font-size: 24px;
+  transform: translateY(0);
+  transition: transform 0.1s linear;
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+@media screen and (max-width: 712px) {
+  #section-asteroids:last-child {
+    width: 90%;
+  }
+}
+#section-asteroids:last-child h1 {
+  font-weight: 500;
+}
+#section-asteroids div button {
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  width: 90px;
+  height: 36px;
+  cursor: pointer;
+}
+#section-asteroids div button :hover {
+  background-color: #080e21;
+  transform: scale(1.2);
+}
+#section-asteroids::before {
+  content: url("../assets/Asteroid.jpg");
 }
 
 #gallery-div {
@@ -63,28 +123,19 @@
   z-index: 2;
   background-color: #1b2735;
   width: 100%;
-  height: 70vh;
+  height: fit-content;
   box-shadow: 0px 0px 5px 5px rgb(40, 40, 40);
 }
 #gallery-div div {
-  font-size: 24px;
+  font-size: calc(0.75em + 1vmin);
   color: #fff;
 }
 #gallery-div div#gallery-images {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   gap: 20vw;
-}
-
-#section-comets div,
-#section-asteroids div {
-  opacity: 0;
-  animation-name: appear;
-  animation-duration: 2.5s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes appear {
