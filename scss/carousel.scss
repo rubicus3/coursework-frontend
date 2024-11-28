@@ -29,14 +29,14 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
     width: 50vw;
     height: 600px;
 
-    @media screen and (max-width: 712px) {
+    @media screen and (max-width: 1000px) {
         width: 90vw;
     }
 
     max-width: 100%;
     .bullet-container {
         position: absolute;
-        bottom: 10px;
+        bottom: -2em;
         width: 100%;
         display: flex;
         align-items: center;
@@ -59,7 +59,7 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
     .slider-content {
         position: relative;
         left: 50%;
-        top: 50%;
+        top: 40%;
         width: 70%;
         height: 60%;
         transform: translate(-50%, -50%);
