@@ -157,6 +157,98 @@ $drop-shadow: drop-shadow(0 0 0.75rem gray);
     }
 }
 
+#section-gallery {
+    width: 100%;
+    height: $base-overflow-vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    box-shadow: 0px 0px 30px 15px rgb(82, 81, 81);
+    background-image: linear-gradient(150deg, rgb(36, 36, 36), rgb(22, 18, 37));
+
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+
+    @media screen and (max-width: 712px) {
+        height: calc($base-overflow-vh * 1.5);
+    }
+
+    #div-gallery-text {
+        animation-name: appear2;
+        animation-duration: 2.5s;
+        animation-fill-mode: forwards;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+        h1 {
+            margin: 0;
+        }
+        p {
+            text-align: justify;
+        }
+    }
+
+    #div-gallery {
+        background-color: pink;
+        height: 70vh;
+        width: 90vw;
+
+        display: grid;
+        overflow: auto;
+
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+
+        grid-template-areas:
+            "i5 i5 i2 i2"
+            "i1 i6 i2 i2"
+            "i1 i3 i4 i4";
+        gap: 5px;
+
+        div {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            border-radius: 3px;
+            img {
+                background-size: cover;
+                object-fit: cover;
+            }
+        }
+
+        #gallery-img-1 {
+            grid-area: i1;
+            content: url("../assets/gallery-preview/PIA18429_modest.jpg");
+        }
+        #gallery-img-2 {
+            grid-area: i2;
+            content: url("../assets/gallery-preview/PIA21597.gif");
+        }
+        #gallery-img-3 {
+            grid-area: i3;
+            content: url("../assets/gallery-preview/PIA24471~orig.jpg");
+        }
+        #gallery-img-4 {
+            grid-area: i4;
+            content: url("../assets/gallery-preview/PIA25140_modest.jpg");
+        }
+        #gallery-img-5 {
+            grid-area: i5;
+            content: url("../assets/gallery-preview/PIA25329_modest.jpg");
+        }
+        #gallery-img-6 {
+            grid-area: i6;
+            content: url("../assets/gallery-preview/PIA26150_modest.jpg");
+        }
+    }
+}
+
 @keyframes appear {
     0% {
         opacity: 0;
@@ -166,6 +258,18 @@ $drop-shadow: drop-shadow(0 0 0.75rem gray);
     100% {
         opacity: 1;
         transform: translateY(0px);
+    }
+}
+
+@keyframes appear2 {
+    0% {
+        opacity: 0;
+        transform: translateY(450px) scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
     }
 }
 
