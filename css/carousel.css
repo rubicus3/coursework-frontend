@@ -1,6 +1,5 @@
 .fa {
-  font-family: var(--fa-style-family, "Font Awesome 6 Free");
-  font-weight: var(--fa-style, 900);
+  font-weight: 900;
 }
 
 @keyframes heartbeat {
@@ -215,11 +214,9 @@
   top: 50%;
   color: #ffffff;
   transform: translateY(-50%);
-  padding: 20px 15px;
-  border-top: 2px solid #fdc84b;
-  border-right: 2px solid #fdc84b;
-  border-bottom: 2px solid #fdc84b;
-  border-left: 2px solid #fdc84b;
+  padding: 15px 15px;
+  border: 2px solid gold;
+  border-radius: 50%;
   margin-right: -2px;
 }
 .slider-container .slider-right {
@@ -230,11 +227,9 @@
   top: 50%;
   color: #ffffff;
   transform: translateY(-50%);
-  padding: 20px 15px;
-  border-top: 2px solid #fdc84b;
-  border-right: 2px solid #fdc84b;
-  border-bottom: 2px solid #fdc84b;
-  border-left: 2px solid #fdc84b;
+  padding: 15px 15px;
+  border: 2px solid gold;
+  border-radius: 50%;
   margin-left: -2px;
 }
 .slider-container .not-visible {

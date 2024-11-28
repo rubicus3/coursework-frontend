@@ -25,6 +25,7 @@
 
     width: 100%;
     height: 100vh;
+    padding-top: 1rem;
 
     @media screen and (max-width: 712px) {
         flex-wrap: wrap;
@@ -50,11 +51,8 @@
         animation-duration: 3s;
         animation-fill-mode: forwards;
 
-        h1 {
-            font-size: 48px;
-        }
         p {
-            font-size: 24px;
+            text-align: justify;
         }
     }
     img {
@@ -110,11 +108,8 @@
 
         border-radius: 15px;
 
-        h1 {
-            font-size: 48px;
-        }
         p {
-            font-size: 24px;
+            text-align: justify;
         }
     }
 

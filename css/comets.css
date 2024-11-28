@@ -21,6 +21,7 @@
   justify-content: space-around;
   width: 100%;
   height: 100vh;
+  padding-top: 1rem;
 }
 @media screen and (max-width: 712px) {
   #section-general {
@@ -46,11 +47,8 @@
     height: fit-content;
   }
 }
-#section-general div h1 {
-  font-size: 48px;
-}
 #section-general div p {
-  font-size: 24px;
+  text-align: justify;
 }
 #section-general img {
   opacity: 0;
@@ -99,11 +97,8 @@
   padding: 1rem;
   border-radius: 15px;
 }
-#section-history #info-list h1 {
-  font-size: 48px;
-}
 #section-history #info-list p {
-  font-size: 24px;
+  text-align: justify;
 }
 #section-history::before {
   content: url("../assets/wallpaperflare-green.jpg");
