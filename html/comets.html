@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>О кометах</title>
         <link rel="stylesheet" href="../css/main.css" />
-        <link rel="stylesheet" href="../css/comets.css" />
         <link rel="stylesheet" href="../css/header.css" />
-        <link rel="stylesheet" href="../css/overlay-container.css" />
         <link rel="stylesheet" href="../css/carousel.css" />
+        <link rel="stylesheet" href="../css/overlay-container.css" />
+        <link rel="stylesheet" href="../css/comets.css" />
         <link rel="icon" href="../assets/logo.png" sizes="any" />
     </head>
     <body>
@@ -19,7 +19,7 @@
                 <a href="comets.html">О кометах</a>
                 <a href="asteroids.html">Об астероидах</a>
                 <a href="gallery.html">Галерея</a>
-                <a href="#footer">Контакты</a>
+                <a href="contacts.html">Контакты</a>
             </nav>
             <img id="menu-btn" src="../assets/menu.svg" onclick="onMenuClick()" />
         </header>
@@ -53,62 +53,10 @@
             <section class="overflow-container" id="section-recent"></section>
         </main>
 
-        <footer id="footer">
-            <p>&copy; 2023 Астероиды и Кометы. Все права защищены.</p>
-        </footer>
-
-        <style>
-            .overlay-container {
-                position: relative;
-                overflow: hidden;
-            }
-
-            .overlay-container img {
-                height: 100%;
-                max-width: 100%;
-
-                object-fit: cover;
-
-                border-radius: 1rem;
-            }
-            .overlay {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-
-                width: 100%;
-                height: 0%;
-
-                color: #fff;
-                display: flex;
-                justify-content: center;
-                align-items: end;
-
-                background-image: linear-gradient(to top, #000000 0%, #00000007 100%);
-                opacity: 0;
-                background-color: color;
-
-                transition: all 0.3s ease;
-            }
-
-            .overlay-container:hover .overlay {
-                opacity: 1;
-                height: 50%;
-            }
-
-            .overlay span {
-                font-family: "Cormorant", serif;
-                font-optical-sizing: auto;
-                font-weight: 600;
-                font-style: normal;
-                font-size: 19px;
-
-                margin: 7px;
-
-                text-align: justify;
-            }
-        </style>
         <script src="../js/header.js"></script>
         <script src="../js/carousel.js"></script>
     </body>
+    <footer id="footer">
+        <p>&copy; 2023 Астероиды и Кометы. Все права защищены.</p>
+    </footer>
 </html>
