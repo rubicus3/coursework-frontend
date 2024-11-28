@@ -3,109 +3,89 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Астероиды и Кометы</title>
+        <title>О кометах</title>
         <link rel="stylesheet" href="../css/main.css" />
         <link rel="stylesheet" href="../css/index.css" />
-        <link rel="stylesheet" href="../css/loading-screen.css" />
         <link rel="stylesheet" href="../css/header.css" />
-        <link rel="stylesheet" href="../css/overlay.css" />
+        <link rel="stylesheet" href="../css/carousel.css" />
 
         <link rel="icon" href="../assets/logo.png" sizes="any" />
     </head>
     <body>
-        <div class="loading-screen">
-            <h1 class="ubuntu-condensed-regular">Давайте погрузимся в космос!</h1>
-            <div class="star"></div>
-            <div class="meteor-1"></div>
-            <div class="meteor-2"></div>
-            <div class="meteor-3"></div>
-            <div class="meteor-4"></div>
-            <div class="meteor-5"></div>
-            <div class="meteor-6"></div>
-            <div class="meteor-7"></div>
-            <div class="meteor-8"></div>
-            <div class="meteor-9"></div>
-            <div class="meteor-10"></div>
-            <div class="meteor-11"></div>
-            <div class="meteor-12"></div>
-            <div class="meteor-13"></div>
-            <div class="meteor-14"></div>
-            <div class="meteor-15"></div>
-        </div>
-        <div id="header-container">
-            <header id="landscape-header">
-                <img src="../assets/logo.png" />
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="comets.html">О кометах</a></li>
-                        <li><a href="asteroids.html">Об астероидах</a></li>
-                        <li><a href="gallery.html">Галерея</a></li>
-                        <li><a href="#footer">Контакты</a></li>
-                    </ul>
-                </nav>
-            </header>
-
-            <header id="mobile-header">
-                <img src="../assets/logo.png" />
-                <img src="../assets/menu.svg" id="menu-btn" onclick="onMenuClick()" />
-            </header>
-
-            <div id="mobile-header-overlay">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="comets.html">О кометах</a></li>
-                        <li><a href="asteroids.html">Об астероидах</a></li>
-                        <li><a href="gallery.html">Галерея</a></li>
-                        <li><a href="#footer">Контакты</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        <header id="header">
+            <img id="img-logo" src="../assets/logo.png" />
+            <nav id="nav">
+                <a href="index.html">Главная</a>
+                <a href="comets.html">О кометах</a>
+                <a href="asteroids.html">Об астероидах</a>
+                <a href="gallery.html">Галерея</a>
+                <a href="#footer">Контакты</a>
+            </nav>
+            <img id="menu-btn" src="../assets/menu.svg" onclick="onMenuClick()" />
+        </header>
 
         <main>
             <section class="overflow-container" id="section-comets">
-                <div></div>
+                <div style="width: 130vw"></div>
                 <div id="text1">
                     <h1>Кометы</h1>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas iure modi adipisci dolor iusto
-                        fugiat in earum quod facilis laborum, saepe delectus obcaecati soluta dolores.
+                        Кометы - удивительные космические объекты, пролетающие через нашу Солнечную систему. Они состоят
+                        из льда, пыли и камней, создавая яркие хвосты, когда приближаются к Солнцу. Наблюдение за
+                        кометами - захватывающее и редкое зрелище, которое стоит увидеть. Они напоминают нам о величии и
+                        таинственности космоса.
                     </p>
                     <button href="comets.html" onclick="location.href='comets.html';">Explore</button>
                 </div>
             </section>
-
-            <section id="gallery-div">
-                <div>
+            <section id="section-gallery">
+                <div id="div-gallery-text">
                     <h1>Галерея</h1>
-                    <span
-                        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fuga rem praesentium sequi
-                        exercitationem eligendi maxime quaerat. Dolorem illum officiis ab quis neque voluptas
-                        aspernatur?</span
-                    >
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ullam sequi inventore quae
+                        possimus aut. Nemo ullam ipsam aut pariatur quo officiis aliquid ad quia.
+                    </p>
+                </div>
+                <div id="div-gallery">
+                    <div id="gallery-img-1">
+                        <img src="../assets/gallery-preview/PIA18429_modest.jpg" />
+                    </div>
+                    <div id="gallery-img-2">
+                        <img src="../assets/gallery-preview/PIA21597.gif" />
+                    </div>
+                    <div id="gallery-img-3">
+                        <img src="../assets/gallery-preview/PIA24471~orig.jpg" />
+                    </div>
+                    <div id="gallery-img-4">
+                        <img src="../assets/gallery-preview/PIA25140_modest.jpg" />
+                    </div>
+                    <div id="gallery-img-5">
+                        <img src="../assets/gallery-preview/PIA26150_modest.jpg" />
+                    </div>
+                    <div id="gallery-img-6">
+                        <img src="../assets/gallery-preview/PIA25329_modest.jpg" />
+                    </div>
                 </div>
             </section>
-
             <section class="overflow-container" id="section-asteroids">
+                <div style="width: 10vw"></div>
                 <div id="text2">
                     <h1>Астероиды</h1>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eum iure omnis sed enim
-                        deserunt animi amet pariatur ipsam? Aperiam reiciendis et debitis quibusdam perspiciatis!
+                        Астероиды - впечатляющие и загадочные объекты космоса. Они состоят из камня и металлов, часто
+                        имея неправильную форму. Наблюдение за астероидами открывает уникальные возможности для научных
+                        исследований и восхищения. Они свидетельствуют о бескрайности и тайнах космоса, которые
+                        продолжают удивлять человечество.
                     </p>
-                    <button href="asteroids.html" onclick="location.href='asteroids.html';">Explore</button>
+                    <button href="asteroids.html" onclick="location.href='astteroids.html';">Explore</button>
                 </div>
-                <div></div>
+                <div style="width: 130vw"></div>
             </section>
         </main>
 
         <footer id="footer">
             <p>&copy; 2023 Астероиды и Кометы. Все права защищены.</p>
         </footer>
-
-        <script src="../js/main.js"></script>
         <script src="../js/header.js"></script>
     </body>
 </html>
