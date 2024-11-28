@@ -3,6 +3,8 @@ const noArrows = false;
 const noBullets = false;
 
 const container = document.querySelector(".slider-container");
+const infoBox = document.querySelector("#info-list");
+
 var slide = document.querySelectorAll(".slider-single");
 var slideTotal = slide.length - 1;
 var slideCurrent = -1;
@@ -102,6 +104,7 @@ function checkRepeat() {
             }
         }
     }
+    updateInfo();
 }
 
 function slideRight() {
@@ -225,4 +228,45 @@ function goToIndexSlide(index) {
     }
 }
 
+function updateInfo() {
+    info = data[slideCurrent];
+
+    if (info) {
+        slide[slideCurrent].getElementsByTagName("span")[0].innerHTML = info.overlay;
+        slide[slideCurrent].getElementsByTagName("h1")[0].innerHTML = info.subtext;
+
+        let h1 = infoBox.getElementsByTagName("h1")[0];
+        let p = infoBox.getElementsByTagName("p")[0];
+
+        h1.animate(fadeInAnimation, fadeAnimationOptions);
+        p.animate(fadeInAnimation, fadeAnimationOptions);
+
+        h1.innerHTML = info.header;
+        p.innerHTML = info.text;
+
+        h1.animate(fadeOutAnimation, fadeAnimationOptions);
+        p.animate(fadeOutAnimation, fadeAnimationOptions);
+    }
+}
+
 slideInitial();
+
+const fadeInAnimation = [{ opacity: 1 }, { opacity: 0 }];
+const fadeOutAnimation = [{ opacity: 0 }, { opacity: 1 }];
+const fadeAnimationOptions = { duration: 500, iterations: 1 };
+
+const data = [
+    {
+        header: "Первооткрыватель",
+        text: "Аристотель был первым известным ученым, который использовал различные теории и факты наблюдений для использования последовательной, структурированной космологической теории комет. Он считал, что кометы были атмосферными явлениями",
+        overlay:
+            "Римская копия (в мраморе) греческого бронзового бюста Аристотеля работы Лисиппа (ок. 330 г. до н. э.) с современной алебастровой мантией.",
+        subtext: "Аристо́тель (384–322 до н.э.) - древнегреческий философ и учёный-энциклопедист",
+    },
+    {
+        header: "Первооткрыватель",
+        text: "Аристотель (384–322 до н.э.) был первым известным ученым, который использовал различные теории и факты наблюдений для использования последовательной, структурированной космологической теории комет. Он считал, что кометы были атмосферными явлениями",
+        overlay: "",
+        subtext: "",
+    },
+];
