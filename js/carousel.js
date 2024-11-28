@@ -3,11 +3,42 @@ const noArrows = false;
 const noBullets = false;
 
 const container = document.querySelector(".slider-container");
+const content = document.querySelector(".slider-content");
 const infoBox = document.querySelector("#info-list");
 
-var slide = document.querySelectorAll(".slider-single");
-var slideTotal = slide.length - 1;
-var slideCurrent = -1;
+var slide;
+var slideTotal;
+var slideCurrent;
+
+function createSilde(src, overlay, subtext) {
+    let s = `
+    <div class="slider-single">
+        <div class="slider-single-image">
+            <div class="overlay-container">
+                <img src="${src}" />
+                <div class="overlay">
+                    <span>
+                        ${overlay}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <h1 class="slider-single-title">${subtext}</h1>
+    </div>`;
+
+    return new DOMParser().parseFromString(s, "text/html").body.firstChild;
+}
+
+function initSliders() {
+    data.forEach((element) => {
+        s = createSilde(element.src, element.overlay, element.subtext);
+        content.appendChild(createSilde(element.src, element.overlay, element.subtext));
+    });
+
+    slide = document.querySelectorAll(".slider-single");
+    slideTotal = slide.length - 1;
+    slideCurrent = -1;
+}
 
 function initBullets() {
     if (noBullets) {
@@ -57,6 +88,7 @@ function initArrows() {
 }
 
 function slideInitial() {
+    initSliders();
     initBullets();
     initArrows();
     setTimeout(function () {
@@ -232,9 +264,6 @@ function updateInfo() {
     info = data[slideCurrent];
 
     if (info) {
-        slide[slideCurrent].getElementsByTagName("span")[0].innerHTML = info.overlay;
-        slide[slideCurrent].getElementsByTagName("h1")[0].innerHTML = info.subtext;
-
         let h1 = infoBox.getElementsByTagName("h1")[0];
         let p = infoBox.getElementsByTagName("p")[0];
 
@@ -248,8 +277,7 @@ function updateInfo() {
         p.animate(fadeOutAnimation, fadeAnimationOptions);
     }
 }
-
-slideInitial();
+addEventListener("DOMContentLoaded", (event) => slideInitial());
 
 const fadeInAnimation = [{ opacity: 1 }, { opacity: 0 }];
 const fadeOutAnimation = [{ opacity: 0 }, { opacity: 1 }];
@@ -257,6 +285,7 @@ const fadeAnimationOptions = { duration: 500, iterations: 1 };
 
 const data = [
     {
+        src: "../assets/Aristotle.jpg",
         header: "Первооткрыватель",
         text: "Аристотель был первым известным ученым, который использовал различные теории и факты наблюдений для использования последовательной, структурированной космологической теории комет. Он считал, что кометы были атмосферными явлениями",
         overlay:
@@ -264,6 +293,15 @@ const data = [
         subtext: "Аристо́тель (384–322 до н.э.) - древнегреческий философ и учёный-энциклопедист",
     },
     {
+        src: "../assets/353px-Bayeux_Tapestry_scene32_Halley_comet.jpg",
+        header: "Первооткрыватель",
+        text: "Аристотель (384–322 до н.э.) был первым известным ученым, который использовал различные теории и факты наблюдений для использования последовательной, структурированной космологической теории комет. Он считал, что кометы были атмосферными явлениями",
+        overlay: "",
+        subtext: "",
+    },
+
+    {
+        src: "../assets/Asteroid.jpeg",
         header: "Первооткрыватель",
         text: "Аристотель (384–322 до н.э.) был первым известным ученым, который использовал различные теории и факты наблюдений для использования последовательной, структурированной космологической теории комет. Он считал, что кометы были атмосферными явлениями",
         overlay: "",
