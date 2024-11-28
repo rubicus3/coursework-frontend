@@ -3,6 +3,13 @@
   overflow: hidden;
 }
 
+.overlay-container img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
 .overlay {
   position: absolute;
   bottom: 0;
@@ -34,4 +41,4 @@
   text-align: justify;
 }
 
-/*# sourceMappingURL=overlay.css.map */
+/*# sourceMappingURL=overlay-container.css.map */

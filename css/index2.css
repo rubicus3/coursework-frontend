@@ -9,7 +9,7 @@
   justify-content: center;
   top: 0;
   left: 0;
-  background-size: cover;
+  background-size: 100%;
   object-fit: cover;
   width: 100%;
   height: 85vh;
@@ -20,7 +20,7 @@
   }
 }
 
-#section-general {
+#section-comets {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -28,16 +28,16 @@
   height: 85vh;
 }
 @media screen and (max-width: 712px) {
-  #section-general {
+  #section-comets {
     height: 127.5vh;
   }
 }
 @media screen and (max-width: 712px) {
-  #section-general {
+  #section-comets {
     flex-wrap: wrap-reverse;
   }
 }
-#section-general div {
+#section-comets div {
   transform: translateY(0px);
   width: 95vw;
   animation-name: appear;
@@ -45,30 +45,16 @@
   animation-fill-mode: forwards;
 }
 @media screen and (max-width: 712px) {
-  #section-general div {
+  #section-comets div {
     width: 95vw;
     height: fit-content;
   }
 }
-#section-general div h1 {
-  font-size: 3rem;
+#section-comets div h1,
+#section-comets div p {
   filter: drop-shadow(0 0 0.75rem gray);
 }
-@media screen and (max-width: 712px) {
-  #section-general div h1 {
-    font-size: 2.5rem;
-  }
-}
-#section-general div p {
-  font-size: 1.5rem;
-  filter: drop-shadow(0 0 0.75rem gray);
-}
-@media screen and (max-width: 712px) {
-  #section-general div p {
-    font-size: 1.2rem;
-  }
-}
-#section-general div button {
+#section-comets div button {
   background: none;
   border: 1px solid #fff;
   border-radius: 2px;
@@ -78,61 +64,88 @@
   cursor: pointer;
   filter: drop-shadow(0 0 0.75rem gray);
 }
-#section-general div button :hover {
+#section-comets div button :hover {
   background-color: #080e21;
   transform: scale(1.2);
 }
-#section-general img {
+#section-comets img {
   position: relative;
   width: 25vw;
 }
 @media screen and (max-width: 712px) {
-  #section-general img {
+  #section-comets img {
     width: max-content;
   }
 }
-#section-general::before {
+#section-comets::before {
   content: url("../assets/Comet.jpg");
   animation-name: unblur;
   animation-duration: 2.5s;
   animation-fill-mode: forwards;
 }
 
-#section-history {
+#section-asteroids {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: 100vh;
+  height: 85vh;
 }
 @media screen and (max-width: 712px) {
-  #section-history {
-    flex-direction: column;
+  #section-asteroids {
+    height: 127.5vh;
   }
 }
-#section-history #scrollable-list {
-  position: inherit;
-  background-color: rgba(110, 99, 99, 0.5);
-  border-radius: 15px;
-  width: fit-content;
-  height: fit-content;
+@media screen and (max-width: 712px) {
+  #section-asteroids {
+    flex-wrap: wrap-reverse;
+  }
 }
-#section-history #info-list {
-  position: inherit;
-  background-color: rgba(110, 99, 99, 0.5);
-  width: 20vw;
-  height: fit-content;
-  padding: 1rem;
-  border-radius: 15px;
+#section-asteroids div {
+  transform: translateY(0px);
+  width: 95vw;
+  animation-name: appear;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
 }
-#section-history #info-list h1 {
-  font-size: 48px;
+@media screen and (max-width: 712px) {
+  #section-asteroids div {
+    width: 95vw;
+    height: fit-content;
+  }
 }
-#section-history #info-list p {
-  font-size: 24px;
+#section-asteroids div h1,
+#section-asteroids div p {
+  filter: drop-shadow(0 0 0.75rem gray);
 }
-#section-history::before {
-  content: url("../assets/wallpaperflare-green.jpg");
+#section-asteroids div button {
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  width: 90px;
+  height: 36px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.75rem gray);
+}
+#section-asteroids div button :hover {
+  background-color: #080e21;
+  transform: scale(1.2);
+}
+#section-asteroids img {
+  position: relative;
+  width: 25vw;
+}
+@media screen and (max-width: 712px) {
+  #section-asteroids img {
+    width: max-content;
+  }
+}
+#section-asteroids::before {
+  content: url("../assets/Asteroid.jpg");
+  animation-name: unblur;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes appear {

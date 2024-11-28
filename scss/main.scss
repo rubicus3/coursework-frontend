@@ -8,6 +8,19 @@ html {
     font-family: "Ubuntu Condensed", sans-serif;
     font-style: normal;
     color: white;
+
+    h1 {
+        font-size: 3rem;
+        @media screen and (max-width: 712px) {
+            font-size: 2.5rem;
+        }
+    }
+    p {
+        font-size: 1.5rem;
+        @media screen and (max-width: 712px) {
+            font-size: 1.2rem;
+        }
+    }
 }
 
 body,
