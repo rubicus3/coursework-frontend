@@ -84,10 +84,9 @@
 @media screen and (max-width: 1000px) {
   #section-history {
     flex-direction: column-reverse;
-    height: fit-content;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    height: 200vh;
     justify-content: center;
+    padding-bottom: 10vh;
     gap: 3em;
   }
 }

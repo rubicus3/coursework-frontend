@@ -109,40 +109,17 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
                 display: block;
                 float: left;
                 margin: 16px 0 0 20px;
-                font-size: 20px;
-                font-family: "karla";
+                font-size: 1.5em;
+                @media screen and (max-width: 712px) {
+                    font-size: 1em;
+                }
+
                 font-weight: 400;
                 color: #ffffff;
                 transition: $time $mode;
                 opacity: 0;
             }
-            .slider-single-likes {
-                display: block;
-                float: right;
-                margin: 16px 20px 0 0;
-                transition: $time $mode;
-                opacity: 0;
-                i {
-                    font-size: 20px;
-                    display: inline-block;
-                    vertical-align: middle;
-                    margin-right: 5px;
-                    color: #ff6060;
-                    transition: $time $mode;
-                    transform: scale(0);
-                }
-                p {
-                    display: inline-block;
-                    vertical-align: middle;
-                    margin: 0;
-                    color: #ffffff;
-                }
-                &:hover,
-                &:focus {
-                    outline: none;
-                    text-decoration: none;
-                }
-            }
+
             &.preactivede {
                 //z-index: 0;
                 .slider-single-image {
