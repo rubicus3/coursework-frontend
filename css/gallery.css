@@ -1,3 +1,60 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  background-color: #fff;
+  overflow-y: visible;
+  height: 30em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  transition: 0.2s;
+}
+.card:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
 
+.card-img {
+  width: 100%;
+  min-height: 15em;
+  max-height: 25em;
+  object-fit: cover;
+  display: block;
+  transition: 0.05s;
+}
+.card-img:hover {
+  transition: 0.2s;
+  transform: scale(0.98);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h1 {
+  color: black;
+  margin: 0 0 8px 0;
+  font-size: 1.2em;
+}
+
+.card-content p {
+  margin: 0;
+  color: #555;
+  font-size: 1em;
+}
+
+#section-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 3em;
+  min-height: 100vh;
+  width: 100%;
+}
 
 /*# sourceMappingURL=gallery.css.map */
