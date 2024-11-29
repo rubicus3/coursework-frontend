@@ -5,8 +5,17 @@ function randomInteger(min, max) {
     return Math.floor(rand);
 }
 async function getCollection(page = 1) {
+    let media_type = "image";
+    let keywords;
+    if (page % 2 == 0) {
+        keywords = "asteroid";
+    } else {
+        keywords = "comet";
+    }
+    let page_size = 5;
+
     let response = await fetch(
-        `https://images-api.nasa.gov/search?keywords=asteroid,comet&media_type=image&page_size=5&page=${page}`
+        `https://images-api.nasa.gov/search?keywords=${keywords}&media_type=${media_type}&page_size=${page_size}&page=${page}`
     );
     json = await response.json();
 
@@ -25,20 +34,6 @@ async function createCard(title, description, src) {
     `;
     return new DOMParser().parseFromString(template, "text/html").body.firstChild;
 }
-function checkImage(url) {
-    var request = new XMLHttpRequest();
-    request.open("GET", url, true);
-    request.send();
-    request.onload = function () {
-        status = request.status;
-        if (request.status == 200) {
-            //if(statusText == OK)
-            return true;
-        } else {
-            return false;
-        }
-    };
-}
 
 async function loadPage() {
     currentPage += 1;
@@ -55,9 +50,6 @@ async function loadPage() {
 
         let description = element.data[0].description;
         let title = element.data[0].title;
-        // if (description.length > 100) {
-        //     description = description.slice(0, 97) + "...";
-        // }
         let card = await createCard(title, description, source);
 
         document.getElementById("section-gallery").appendChild(card);
