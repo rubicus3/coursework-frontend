@@ -1,8 +1,101 @@
-section {
-    width: 100%;
-    height: 80vh;
+.overflow-container {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        background-size: cover;
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+    }
 }
 
 #section-overview {
     padding-top: 8vh;
+    width: 100%;
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("../assets/PIA24471~orig.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+
+    animation-name: unblur;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+
+    div {
+        position: relative;
+
+        background-color: rgba(46, 39, 76, 0.3);
+        backdrop-filter: invert(1) sepia(1) blur(1px) contrast(0.8) grayscale(0.8);
+
+        width: 50vw;
+        @media screen and (max-width: 712px) {
+            width: 85vw;
+        }
+        border-radius: 10px;
+
+        animation-name: appear;
+        animation-duration: 2.5s;
+        animation-fill-mode: forwards;
+        animation-composition: ease-in;
+
+        p {
+            padding-left: 1em;
+            padding-right: 1em;
+            text-align: justify;
+        }
+    }
+}
+
+#section-map {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(45deg, #0c052085, #5d391680);
+
+    iframe {
+        height: 80vh;
+        width: 85vw;
+    }
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(-100vh) scale(0.8);
+    }
+    70% {
+        transform: translateY(10vh) scale(1.2);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes unblur {
+    0% {
+        filter: opacity(0.3) blur(10px);
+    }
+    100% {
+        filter: opacity(1) blur(0.5px);
+    }
 }

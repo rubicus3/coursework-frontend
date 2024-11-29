@@ -44,6 +44,7 @@
   animation-name: appear;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+  animation-timing-function: ease;
 }
 @media screen and (max-width: 712px) {
   #section-general div {
@@ -71,7 +72,10 @@
 #section-general::before {
   content: url("../assets/acryllic-wallpaper.jpg");
   filter: blur(12px) saturate(60%);
-  animation: 2s 1 ease-in appear;
+  animation-name: appear3;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 #section-history {
@@ -143,6 +147,18 @@
   100% {
     opacity: 1;
     transform: translateY(0px) scale(1);
+  }
+}
+@keyframes appear3 {
+  0% {
+    opacity: 0;
+    transform: scale(1.3);
+    filter: hue-rotate(45deg) blur(5px) saturate(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(0deg) blur(12px) saturate(60%);
   }
 }
 
