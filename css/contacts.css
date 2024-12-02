@@ -5,6 +5,7 @@
   padding-top: 5em;
   width: 100%;
   height: 100vh;
+  background-image: linear-gradient(30deg, rgb(89, 0, 68), rgb(0, 7, 73));
 }
 #section-contacts #div-contacts {
   display: flex;
