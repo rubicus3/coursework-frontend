@@ -26,7 +26,6 @@
   background-attachment: fixed;
   animation-name: unblur;
   animation-duration: 2.5s;
-  animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 }
 #section-overview div {
@@ -38,7 +37,6 @@
   animation-name: appear;
   animation-duration: 2.5s;
   animation-fill-mode: forwards;
-  animation-composition: ease-in;
 }
 @media screen and (max-width: 712px) {
   #section-overview div {
